@@ -21,7 +21,7 @@ No extra installations are required.
 
 ## Usage
 
-Link to website: [https://mvc-tech-blog-c15b.onrender.com/  ](https://text-editor-lhrf.onrender.com/)   
+Link to website: https://text-editor-lhrf.onrender.com/   
 No special instructions are needed to use the application.
 
 ## Credits
