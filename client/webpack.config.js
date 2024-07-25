@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor',
+        title: 'Just Another Text Editor',
       }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
@@ -30,6 +30,8 @@ module.exports = () => {
         theme_color: '#31a9e1',
         start_url: './',
         publicPath: './',
+        inject: true,
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -39,7 +41,7 @@ module.exports = () => {
         ],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
     ],
@@ -49,6 +51,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
         },
         {
           // to remove possible errors reading js es6 by converting to a compatible version
