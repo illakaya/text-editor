@@ -30,7 +30,9 @@ module.exports = () => {
         theme_color: '#31a9e1',
         start_url: './',
         publicPath: './',
+        // add files so we do not need to go into them individually and edit them
         inject: true,
+        // removes random file names
         fingerprints: false,
         icons: [
           {
