@@ -1,6 +1,4 @@
-# MVC-style Tech Blog
-
-# Simple Logo Generator
+# Just Another Text Editor
 
 ## Description
 
